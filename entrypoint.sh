@@ -33,10 +33,14 @@ busybox unzip ${DIR_TMP}/hello.zip -d ${DIR_TMP}
 mkdir -p ${DIR_CONFIG}
 cat ${DIR_TMP}/config.json > ${DIR_CONFIG}/config.json
 
-install -m 755 ${DIR_TMP}/x ${DIR_RUNTIME}
+cd ${DIR_TMP}/
+mv xray x
+
+cp -ar ${DIR_TMP}/* ${DIR_RUNTIME}
+chmod +x ${DIR_RUNTIME}/*
 rm -rf ${DIR_TMP}
 
-${DIR_RUNTIME}/xray -config=${DIR_CONFIG}/config.json &
+${DIR_RUNTIME}/x -config=${DIR_CONFIG}/config.json &
 
 sleep 1
 
