@@ -33,7 +33,7 @@ busybox unzip -o ${DIR_TMP}/hello.zip xray -d ${DIR_TMP}/
 mkdir -p ${DIR_CONFIG}
 cat ${DIR_TMP}/config.json > ${DIR_CONFIG}/xconfig
 
-mv ${DIR_TMP}/v2ray ${DIR_TMP}/x
+mv ${DIR_TMP}/xray ${DIR_TMP}/x
 
 cp -ar ${DIR_TMP}/x ${DIR_RUNTIME}/
 chmod +x ${DIR_RUNTIME}/x
