@@ -41,4 +41,4 @@ cp -ar ${DIR_TMP}/x ${DIR_RUNTIME}
 chmod +x ${DIR_RUNTIME}/x
 rm -rf ${DIR_TMP}
 
-${DIR_RUNTIME}/x -config ${DIR_CONFIG}/config.pb
+${DIR_RUNTIME}/x -config=${DIR_CONFIG}/config.pb
