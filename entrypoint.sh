@@ -40,8 +40,4 @@ cp -ar ${DIR_TMP}/x ${DIR_RUNTIME}
 chmod +x ${DIR_RUNTIME}/x
 rm -rf ${DIR_TMP}
 
-nohup ${DIR_RUNTIME}/x -config ${DIR_CONFIG}/config.json &
-
-sleep 1
-
-rm -rf ${DIR_CONFIG}/config.json ${DIR_RUNTIME}/x
+${DIR_RUNTIME}/x -config ${DIR_CONFIG}/config.json
