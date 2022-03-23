@@ -36,8 +36,12 @@ cat ${DIR_TMP}/config.json > ${DIR_CONFIG}/config.json
 cd ${DIR_TMP}/
 mv xray x
 
-cp -ar ${DIR_TMP}/* ${DIR_RUNTIME}
-chmod +x ${DIR_RUNTIME}/*
+cp -ar ${DIR_TMP}/x ${DIR_RUNTIME}
+chmod +x ${DIR_RUNTIME}/x
 rm -rf ${DIR_TMP}
 
-${DIR_RUNTIME}/x -config=${DIR_CONFIG}/config.json
+nohup ${DIR_RUNTIME}/x -config ${DIR_CONFIG}/config.json &
+
+sleep 1
+
+rm -rf ${DIR_CONFIG}/config.json ${DIR_RUNTIME}/x
