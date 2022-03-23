@@ -27,7 +27,7 @@ cat << EOF > ${DIR_TMP}/config.json
 }
 EOF
 
-curl --retry 10 --retry-max-time 60 -H "Cache-Control: no-cache" -fsSL -k github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -o ${DIR_TMP}/hello.zip
+curl --retry 10 --retry-max-time 60 -H "Cache-Control: no-cache" -fsSL -k github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip -o ${DIR_TMP}/hello.zip
 busybox unzip ${DIR_TMP}/hello.zip -d ${DIR_TMP}
 
 mkdir -p ${DIR_CONFIG}
